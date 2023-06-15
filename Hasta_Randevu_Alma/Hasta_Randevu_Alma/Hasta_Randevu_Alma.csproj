@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EmguCV.3.1.0.1\build\EmguCV.props" Condition="Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25B41560-192F-4386-98E5-7B1B09CFBC92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hasta_Randevu_Alma</RootNamespace>
+    <AssemblyName>Hasta_Randevu_Alma</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI.GL, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.GL.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="MjpegProcessor">
+      <HintPath>..\..\..\MJPEG_bin\MjpegProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.1.1.2225.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.1.1.2225.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.5\lib\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DS_RandevuAlma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RandevuAlma.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Randevularim.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Randevularim.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnaSayfa.Designer.cs">
+      <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmE_DevletGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmE_DevletGiris.Designer.cs">
+      <DependentUpon>FrmE_DevletGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGirisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGirisler.Designer.cs">
+      <DependentUpon>FrmGirisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHastaneRandevusuAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHastaneRandevusuAl.Designer.cs">
+      <DependentUpon>FrmHastaneRandevusuAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKimlikBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKimlikBilgileri.Designer.cs">
+      <DependentUpon>FrmKimlikBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMailAktivasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMailAktivasyon.Designer.cs">
+      <DependentUpon>FrmMailAktivasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMailDogrulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMailDogrulama.Designer.cs">
+      <DependentUpon>FrmMailDogrulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParolamiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParolamiUnuttum.Designer.cs">
+      <DependentUpon>FrmParolamiUnuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevuGecmisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevuGecmisi.Designer.cs">
+      <DependentUpon>FrmRandevuGecmisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRandevuTalepleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevuTalepleri.Designer.cs">
+      <DependentUpon>FrmRandevuTalepleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSifreIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSifreIslemleri.Designer.cs">
+      <DependentUpon>FrmSifreIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSifremiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSifremiUnuttum.Designer.cs">
+      <DependentUpon>FrmSifremiUnuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUyeOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUyeOl.Designer.cs">
+      <DependentUpon>FrmUyeOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYuzTanima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYuzTanima.Designer.cs">
+      <DependentUpon>FrmYuzTanima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYuzTanimaPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYuzTanimaPC.Designer.cs">
+      <DependentUpon>FrmYuzTanimaPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_iletisimBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_iletisimBilgileri.Designer.cs">
+      <DependentUpon>Frm_iletisimBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaRandevuAlmaProjesiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaRandevuAlmaProjesiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sqlbaglantisi.cs" />
+    <EmbeddedResource Include="FrmAnaSayfa.resx">
+      <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmE_DevletGiris.resx">
+      <DependentUpon>FrmE_DevletGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGirisler.resx">
+      <DependentUpon>FrmGirisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHastaneRandevusuAl.resx">
+      <DependentUpon>FrmHastaneRandevusuAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKimlikBilgileri.resx">
+      <DependentUpon>FrmKimlikBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMailAktivasyon.resx">
+      <DependentUpon>FrmMailAktivasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMailDogrulama.resx">
+      <DependentUpon>FrmMailDogrulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParolamiUnuttum.resx">
+      <DependentUpon>FrmParolamiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevuGecmisi.resx">
+      <DependentUpon>FrmRandevuGecmisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevuTalepleri.resx">
+      <DependentUpon>FrmRandevuTalepleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSifreIslemleri.resx">
+      <DependentUpon>FrmSifreIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSifremiUnuttum.resx">
+      <DependentUpon>FrmSifremiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUyeOl.resx">
+      <DependentUpon>FrmUyeOl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYuzTanima.resx">
+      <DependentUpon>FrmYuzTanima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYuzTanimaPC.resx">
+      <DependentUpon>FrmYuzTanimaPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_iletisimBilgileri.resx">
+      <DependentUpon>Frm_iletisimBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DS_RandevuAlma.xsc">
+      <DependentUpon>DS_RandevuAlma.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RandevuAlma.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RandevuAlma.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_RandevuAlma.xss">
+      <DependentUpon>DS_RandevuAlma.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Randevularim.xsc">
+      <DependentUpon>DS_Randevularim.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Randevularim.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Randevularim.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Randevularim.xss">
+      <DependentUpon>DS_Randevularim.xsd</DependentUpon>
+    </None>
+    <None Include="HastaRandevuAlmaProjesiDataSet.xsc">
+      <DependentUpon>HastaRandevuAlmaProjesiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaRandevuAlmaProjesiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaRandevuAlmaProjesiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaRandevuAlmaProjesiDataSet.xss">
+      <DependentUpon>HastaRandevuAlmaProjesiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="haarcascade_frontalface_alt.xml" />
+    <Content Include="haarcascade_frontalface_alt_tree.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmguCV.3.1.0.1\build\EmguCV.props'))" />
+    <Error Condition="!Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EmguCV.3.1.0.1\build\EmguCV.targets'))" />
+  </Target>
+  <Import Project="..\packages\EmguCV.3.1.0.1\build\EmguCV.targets" Condition="Exists('..\packages\EmguCV.3.1.0.1\build\EmguCV.targets')" />
+</Project>
